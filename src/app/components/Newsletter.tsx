@@ -9,9 +9,17 @@ export function Newsletter() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubscribed(true);
-    setEmail('');
-    setTimeout(() => setSubscribed(false), 3000);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ 'form-name': 'newsletter', email }).toString(),
+    })
+      .then(() => {
+        setSubscribed(true);
+        setEmail('');
+        setTimeout(() => setSubscribed(false), 3000);
+      })
+      .catch(() => {});
   };
 
   return (
@@ -28,7 +36,8 @@ export function Newsletter() {
           {t('newsletter.subtitle')}
         </p>
 
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto" netlify>
+        <form name="newsletter" onSubmit={handleSubmit} className="max-w-md mx-auto" data-netlify="true">
+          <input type="hidden" name="form-name" value="newsletter" />
           <div className="flex gap-2">
             <input
               type="email"

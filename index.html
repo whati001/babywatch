@@ -13,10 +13,17 @@
     </head>
 
     <body>
-      
+      <!-- Hidden forms for Netlify build-time discovery -->
+      <form name="preorder" data-netlify="true" hidden>
+        <input type="email" name="email" />
+      </form>
+      <form name="newsletter" data-netlify="true" hidden>
+        <input type="email" name="email" />
+      </form>
+
       <div id="root"></div>
       <script type="module" src="/src/main.tsx"></script>
-      
+
     </body>
   </html>
   

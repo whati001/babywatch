@@ -8,9 +8,17 @@ export function Preorder() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setEmail('');
-    setTimeout(() => setSubmitted(false), 3000);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ 'form-name': 'preorder', email }).toString(),
+    })
+      .then(() => {
+        setSubmitted(true);
+        setEmail('');
+        setTimeout(() => setSubmitted(false), 3000);
+      })
+      .catch(() => {});
   };
 
   return (
@@ -39,7 +47,8 @@ export function Preorder() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto" netlify>
+          <form name="preorder" onSubmit={handleSubmit} className="max-w-md mx-auto" data-netlify="true">
+            <input type="hidden" name="form-name" value="preorder" />
             <div className="flex gap-2">
               <input
                 type="email"
