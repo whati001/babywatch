@@ -27,7 +27,7 @@ export function Footer() {
             <h4 className="mb-4">{t('footer.company')}</h4>
             <div className="text-sm opacity-90 space-y-2">
               <p>Rehka Solution GmbH</p>
-              <p>Wuenschendorf 99</p>
+              <p>Wuenschendorf 248</p>
               <p>8200 Gleisdorf</p>
               <p>Austria</p>
             </div>
@@ -36,8 +36,7 @@ export function Footer() {
           <div>
             <h4 className="mb-4">{t('footer.contact')}</h4>
             <div className="text-sm opacity-90 space-y-2">
-              <p>info@babwatch.com</p>
-              <p>support@babwatch.com</p>
+              <p>babywatch@outlook.com</p>
             </div>
           </div>
         </div>

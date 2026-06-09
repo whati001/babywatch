@@ -39,7 +39,7 @@ export function Preorder() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+          <form onSubmit={handleSubmit} className="max-w-md mx-auto" netlify>
             <div className="flex gap-2">
               <input
                 type="email"
