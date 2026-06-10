@@ -61,21 +61,21 @@ export function Hero() {
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#c8bfb3] rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative w-full min-w-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
           <div className="inline-block mb-6 px-4 py-2 bg-primary text-primary-foreground rounded-full">
             {t('hero.badge')}
           </div>
 
-          <h1 className="text-5xl md:text-7xl mb-6 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl mb-6 tracking-tight">
             {t('hero.title')}
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto">
             {t('hero.subtitle')}
           </p>
 
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             {t('hero.description')}
           </p>
 
@@ -92,7 +92,7 @@ export function Hero() {
         </div>
 
         {/* Image Slider */}
-        <div className="max-w-5xl mx-auto mt-16 pb-12">
+        <div className="w-full max-w-5xl mx-auto mt-16 pb-12 min-w-0">
           <Slider {...sliderSettings}>
             {productImages.map((image, index) => (
               <div key={index} className="px-1 sm:px-2">

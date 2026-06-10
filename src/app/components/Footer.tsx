@@ -36,7 +36,7 @@ export function Footer() {
           <div>
             <h4 className="mb-4">{t('footer.contact')}</h4>
             <div className="text-sm opacity-90 space-y-2">
-              <p>babywatch@outlook.com</p>
+              <p>babywatch-preorder@outlook.com</p>
             </div>
           </div>
         </div>

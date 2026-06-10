@@ -1,10 +1,20 @@
 /* Custom styles for react-slick slider */
 .slick-slider {
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .slick-list {
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+.slick-track {
+  display: flex;
+  align-items: stretch;
 }
 
 .slick-slide > div {

@@ -38,7 +38,7 @@ export function Preorder() {
               <div className="text-sm opacity-90">{t('preorder.discount')}</div>
             </div>
             <div>
-              <div className="text-3xl mb-2">Q3 2026</div>
+              <div className="text-3xl mb-2">Q4 2026</div>
               <div className="text-sm opacity-90">{t('preorder.delivery')}</div>
             </div>
             <div>
@@ -49,14 +49,14 @@ export function Preorder() {
 
           <form name="preorder" onSubmit={handleSubmit} className="max-w-md mx-auto" data-netlify="true">
             <input type="hidden" name="form-name" value="preorder" />
-            <div className="flex gap-2">
+            <div className="flex flex-col sm:flex-row gap-2">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t('preorder.email.placeholder')}
                 required
-                className="flex-1 px-4 py-3 rounded-lg bg-white text-foreground"
+                className="flex-1 min-w-0 px-4 py-3 rounded-lg bg-white text-foreground"
               />
               <button
                 type="submit"

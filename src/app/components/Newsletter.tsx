@@ -38,18 +38,18 @@ export function Newsletter() {
 
         <form name="newsletter" onSubmit={handleSubmit} className="max-w-md mx-auto" data-netlify="true">
           <input type="hidden" name="form-name" value="newsletter" />
-          <div className="flex gap-2">
+          <div className="flex flex-col sm:flex-row gap-2">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder={t('newsletter.email.placeholder')}
               required
-              className="flex-1 px-4 py-3 rounded-lg border border-border bg-background"
+              className="flex-1 min-w-0 px-4 py-3 rounded-lg border border-border bg-background"
             />
             <button
               type="submit"
-              className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
+              className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity whitespace-nowrap"
             >
               {t('newsletter.button')}
             </button>
